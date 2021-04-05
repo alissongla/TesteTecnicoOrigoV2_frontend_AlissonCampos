@@ -87,6 +87,7 @@ export default function AdicionarCliente() {
 
         } catch (error) {
             alert.show("Esse cliente não pode ser adicionado.", {
+                closeCopy: "Ok",
                 onClose: () => { window.location.reload(); }
             });
         }

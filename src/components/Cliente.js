@@ -64,11 +64,13 @@ export default function Cliente() {
             const response = await api.delete("/cliente/" + clienteId);
             if (response.status === 204) {
                 alert.show("Cliente excluído com sucesso", {
+                    closeCopy: "Ok",
                     onClose: () => { window.location.reload(); }
                 });
             }
         } catch (error) {
             alert.show("Esse cliente não pode ser excluído", {
+                closeCopy: "Ok",
                 onClose: () => { window.location.reload(); }
             });
         }
